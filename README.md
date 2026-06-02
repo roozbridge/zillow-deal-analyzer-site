@@ -5,6 +5,7 @@ Static public site for Zillow Deal Analyzer policy, support, and subscription te
 ## Pages
 
 - `index.html`
+- `billing-return.html`
 - `privacy.html`
 - `subscription-terms.html`
 - `support.html`
@@ -19,10 +20,11 @@ Recommended Pages settings:
 
 Expected project-site URLs:
 
-- `https://roozbehid.github.io/zillow-deal-analyzer-site/`
-- `https://roozbehid.github.io/zillow-deal-analyzer-site/privacy.html`
-- `https://roozbehid.github.io/zillow-deal-analyzer-site/subscription-terms.html`
-- `https://roozbehid.github.io/zillow-deal-analyzer-site/support.html`
+- `https://roozbridge.github.io/zillow-deal-analyzer-site/`
+- `https://roozbridge.github.io/zillow-deal-analyzer-site/billing-return.html`
+- `https://roozbridge.github.io/zillow-deal-analyzer-site/privacy.html`
+- `https://roozbridge.github.io/zillow-deal-analyzer-site/subscription-terms.html`
+- `https://roozbridge.github.io/zillow-deal-analyzer-site/support.html`
 
 ## Support
 

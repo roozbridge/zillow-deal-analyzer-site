@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Billing Updated | Zillow Deal Analyzer</title>
+    <meta name="description" content="Billing update return page for Zillow Deal Analyzer.">
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body class="legal-page">
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <img src="assets/icon.svg" alt="" width="34" height="34">
+          <span>Zillow Deal Analyzer</span>
+        </a>
+        <div class="nav-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="subscription-terms.html">Subscription Terms</a>
+          <a href="support.html">Support</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1>Billing update received.</h1>
+      <p>This tab should close automatically. Return to Zillow Deal Analyzer and refresh Account if it stays open.</p>
+      <p>Subscription updates may take a few seconds while Stripe sends webhooks.</p>
+      <p><button class="button" type="button" id="close-tab">Close tab</button></p>
+    </main>
+
+    <footer class="site-footer">
+      <span>Support: <a href="mailto:zillowextension@proton.me">zillowextension@proton.me</a></span>
+    </footer>
+
+    <script>
+      function closeTab() {
+        window.close();
+      }
+
+      document.getElementById("close-tab").addEventListener("click", closeTab);
+      window.setTimeout(closeTab, 250);
+    </script>
+  </body>
+</html>
