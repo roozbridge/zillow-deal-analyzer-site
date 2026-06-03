@@ -43,15 +43,15 @@
         <li>Dashboard state and onboarding checklist state.</li>
         <li>Local usage counters.</li>
         <li>Cached mortgage-rate data.</li>
-        <li>Supabase account session tokens when the user signs in.</li>
+        <li>Backend account session tokens when the user signs in.</li>
       </ul>
       <p>This local data is stored in the user's browser profile. It is not intentionally sent to Zillow Deal Analyzer backend services in the current launch design.</p>
 
       <h2>Information Sent To Backend Services</h2>
-      <p>When a user signs in or subscribes, the extension uses Supabase for account and entitlement services. The backend may process:</p>
+      <p>When a user signs in or subscribes, the extension uses secure backend account services for account and entitlement services. The backend may process:</p>
       <ul>
         <li>Account email.</li>
-        <li>Supabase authentication identifiers.</li>
+        <li>Backend authentication identifiers.</li>
         <li>Backend profile identifier.</li>
         <li>Stripe customer and subscription identifiers.</li>
         <li>Subscription plan/status.</li>
@@ -62,7 +62,7 @@
 
       <h2>Billing</h2>
       <p>Payments are handled by Stripe-hosted Checkout and Billing Portal pages. Zillow Deal Analyzer does not collect or store payment card numbers directly.</p>
-      <p>Stripe may process payment details, billing email, invoices, customer records, and subscription events. Stripe sends subscription lifecycle events to Supabase webhooks so the extension can determine whether the signed-in account has Free or Pro access.</p>
+      <p>Stripe may process payment details, billing email, invoices, customer records, and subscription events. Stripe sends subscription lifecycle events to backend webhooks so the extension can determine whether the signed-in account has Free or Pro access.</p>
       <p>Users can manage payment methods and cancel subscriptions through the Stripe Billing Portal.</p>
       <p>Subscription terms and refund policy are maintained separately in the public <a href="subscription-terms.html">subscription terms and refund policy</a>. Stripe Checkout shows final price, tax, billing interval, and payment details before payment is submitted.</p>
 
@@ -83,7 +83,7 @@
 
       <h2>Product Analytics And Telemetry</h2>
       <p>Automatic product-behavior telemetry is disabled for first launch.</p>
-      <p>Chrome Web Store may provide store-level analytics to the developer, such as installs, uninstalls, impressions, weekly users, and ratings. Stripe provides billing/subscription records for payment operations. Supabase stores backend usage counters required for gated feature enforcement.</p>
+      <p>Chrome Web Store may provide store-level analytics to the developer, such as installs, uninstalls, impressions, weekly users, and ratings. Stripe provides billing/subscription records for payment operations. Backend account services store usage counters required for gated feature enforcement.</p>
       <p>The Chrome Web Store Privacy section includes "User activity" because signed-in backend usage counters record limited monthly counts for gated actions, such as exports, print reports, full-search export runs, and search rows analyzed. These counters are used for Free/Pro limit enforcement, rate limiting, billing support, and abuse prevention.</p>
       <p>These usage counters are not broad browsing-history tracking. Zillow Deal Analyzer does not track user activity on unrelated websites and does not use usage counters for advertising profiles or credit/lending decisions.</p>
       <p>The extension does not currently send broad product-behavior events such as tab clicks, saved-property details, search terms, raw listing content, or notes to a product analytics service.</p>
@@ -97,7 +97,7 @@
       <h2>Data Sharing</h2>
       <p>Zillow Deal Analyzer uses third-party service providers needed to operate the product:</p>
       <ul>
-        <li>Supabase for authentication, backend database, entitlement checks, usage counters, and Edge Functions.</li>
+        <li>Secure backend account services for authentication, entitlement checks, usage counters, and account records.</li>
         <li>Stripe for checkout, billing portal, payment processing, subscription records, and invoices.</li>
         <li>Chrome Web Store/Google for extension distribution and store analytics.</li>
         <li>Freddie Mac public pages for mortgage-rate baseline data when available.</li>
@@ -105,13 +105,13 @@
       <p>Zillow Deal Analyzer does not sell user data.</p>
 
       <h2>Security</h2>
-      <p>Backend calls use HTTPS. Stripe card collection is handled on Stripe-hosted pages. Server-side Stripe and Supabase service-role secrets are not included in the Chrome extension bundle.</p>
+      <p>Backend calls use HTTPS. Stripe card collection is handled on Stripe-hosted pages. Server-side Stripe and backend service secrets are not included in the Chrome extension bundle.</p>
 
       <h2>Limited Use Statement</h2>
       <p>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
 
       <h2>No Affiliation</h2>
-      <p>Zillow Deal Analyzer is not affiliated with Zillow, Google, Chrome Web Store, Freddie Mac, Supabase, or Stripe.</p>
+      <p>Zillow Deal Analyzer is not affiliated with Zillow, Google, Chrome Web Store, Freddie Mac, or Stripe.</p>
 
       <h2>Changes</h2>
       <p>This policy may be updated as the product changes. The published privacy policy shows the latest effective date.</p>
